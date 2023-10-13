@@ -10,10 +10,6 @@ public class N1Ex1 {
 		
 		Collections.sort(nameList.fullList());
 		
-		for(String name : nameList.getContentList()) {
-			System.out.println(name);
-		}
-		
 	}
 
 }
