@@ -1,33 +1,22 @@
 package N1Ex1;
 
 import java.io.File;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.Arrays;
 
 public class N1Ex1 {
 	
 	public static void main (String[]args) {
 		
-		//Path path = Paths.get("names");
+		File directory = new File ("names"); 
+		System.out.println(directory.getAbsolutePath());
+		System.out.println(directory.exists()); 
 		
-		File archivo = new File ("names");
-		System.out.println(archivo.getAbsolutePath());
-		System.out.println(archivo.exists());
+		String[]directoryNameList = directory.list(); 
+		Arrays.sort(directoryNameList);
 		
-		String[]name=archivo.list();
-		Arrays.sort(name);
-		System.out.println();
-		
-		for(int i=0;i<name.length;i++) {
-			System.out.println(name[i]);
+		for(int cont = 0; cont < directoryNameList.length; cont++) {
+			System.out.println(directoryNameList[cont]); 
 		}
-		
-		//ListDirectory directoryList = new ListDirectory(path);
-		
-		//for(Path pathDirectory : directoryList.getDirectoryList()) {
-	//		System.out.println(pathDirectory);
-		//}
 		
 	}
 		
